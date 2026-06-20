@@ -37,8 +37,8 @@ Below is the combined performance metrics log capturing throughput alongside sys
 
 | Timestamp | Instantaneous TPS | TPS | ITL (ms) | VRAM (GB) | RAM Used (GB) | Temp (°C) | Clock Deficit |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-06-19 20:00:50 | 40.235428 | 48.81 | 20.53 | 2.61 | 3.5825 | 66.0 | 17.0 |
-| 2026-06-19 20:00:51 | 40.530121 | 48.81 | 20.53 | 2.61 | 3.5825 | 66.0 | 17.0 |
+| 2026-06-19 20:00:50 | 40.2 | 48.8 | 20.5 | 2.6 | 3.6 | 66.0 | 17.0 |
+| 2026-06-19 20:00:51 | 40.5 | 48.8 | 20.5 | 2.6 | 3.6 | 66.0 | 17.0 |
 
 ## Time Series Data
 
