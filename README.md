@@ -82,28 +82,51 @@ The Lenovo LOQ 15IRX9 (Type 83DV)—uses Lenovo’s updated hyperchamber cooling
 
 
 ┌───────────────────────────────────┐
+
                      ┌──────────────┼──────────────┐
+
                      │                             │
+
                      │     Dual Super Falcon Fans  │
+
                      │  (Lenovo Hyperchamber Exit) │
+
                      │                             │
+
                      └──────────────▲──────────────┘
+
                                     │
+
             ┌───────────────────────┼───────────────────────┐
+
             │                       │                       │
+
             │            Radiant Heat Extraction            │
+
             │                       │                       │
+
     ┌───────┴────────┐      ┌───────┴────────┐     ┌────────┴───────┐
+
     │  Intel i7 CPU  │      │ Overlapping    │     │   NVIDIA GPU   │
+
     │   13650HX      │      │ Copper Pipes   │     │(3050/4050/4060)│
+
     │                │      │                │     │                │
+
     │  Tokenization  │      │ Shared Thermal │     │ Tensor Matrix  │
+
     │  & Prompt      │      │ Saturation Pool│     │ Compute Loop   │
+
     │  Coordination  │      │                │     │ (Kernel Exec)  │
+
     └───────▲────────┘      └───────▲────────┘     └────────▲───────┘
+
             │                       │                       │
+
             └──────────────┬────────┴─────────┬─────────────┘
+
                            │                  │
+
               [CPU Burst Power spikes]     [Sustained GPU TGP]
                         (TTFT Phase)         (Sustained TPS)
 
