@@ -213,6 +213,7 @@ Q8 vs Q4 comparison
 ## 🧱 Architecture Diagram
 
 
+```text
                 ┌────────────────────┐
                 │  Config Sweep Loop │
                 │ (ctx, layers, etc) │
@@ -240,7 +241,7 @@ Q8 vs Q4 comparison
    ┌──────────────────────────┐
    │ CSV / JSON Experiment DB │
    └──────────────────────────┘
-
+```
 
 ## 📁 Output
 
