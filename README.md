@@ -81,8 +81,7 @@ OS           = "Windows 11"
 The Lenovo LOQ 15IRX9 (Type 83DV)—uses Lenovo’s updated hyperchamber cooling design (Dual Super Falcon fans). Physically, it relies on a shared copper thermal block and overlapping heat pipes bridging the Intel i7-13650HX CPU and the NVIDIA GPU.
 
 
-┌───────────────────────────────────┐
-
+┌────────────────────────────┐
                      ┌──────────────┼──────────────┐
                      │                             │
                      │     Dual Super Falcon Fans  │
