@@ -1,37 +1,27 @@
 {
 "PARAMS": {
             "model": "qwen2.5vl:3b",  
-            "temperature": 0.0,      
-            "num_predict": 2048,      
+            "temperature": 0.7,      
+            "num_predict": 4096,      
             "top_k": 1,               
             "top_p": 0.1,              
             "num_ctx": 4096,          
             "num_gpu": -1,              
             "f16_kv": true
           },
-
-"JSON_SCHEMA" :{
-                "type": "object",
-                "properties": {
-                    "visa_rows": {
-                        "type": "array",
-                        "items": {
-                                "type": "object",
-                                "properties": {
-                                                "Visa Location": {"type": "string"},
-                                                "Visa Type": {"type": "string"},
-                                                "Earliest Date": {"type": "string"},
-                                                "Slots on Earliest Date": {"type": "string"},
-                                                "Total Dates Available": {"type": "string"},
-                                                "Last Seen At": {"type": "string"},
-                                                "Relative Time": {"type": "string"}
-                                                },
-                                "required": ["Visa Location", "Visa Type", "Earliest Date"]
-                                }
-                                },
-                                "footer_timestamp": {"type": "string"}
-                            },
-                            "required": ["visa_rows", "footer_timestamp"]
-            }
-
+"TARGET_TEMP": 50,
+"LLAMA_CPP_PARAMS": 
+                {   
+                    "model_path": "models/Qwen2.5-VL-3B-Instruct-Q4_K_M.gguf",
+                    "draft_model_path": "models/qwen2.5-vl-0.5b-q4_k_m.gguf",
+                    "runtime_engine": "llama-cpp-python",
+                    "backend": "CUDA",
+                    "framework": "GGUF",
+                    "speculative_enabled": false,
+                    "gpu_util_target": 1.0,
+                    "kv_cache_type": "bf16",
+                    "num_gpu": -1,
+                    "num_ctx": 8192,
+                    "MAX_BOOST_CLOCK":2100
+                }
 }
