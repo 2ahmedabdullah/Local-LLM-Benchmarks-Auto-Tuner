@@ -80,9 +80,8 @@ OS           = "Windows 11"
 
 The Lenovo LOQ 15IRX9 (Type 83DV)—uses Lenovo’s updated hyperchamber cooling design (Dual Super Falcon fans). Physically, it relies on a shared copper thermal block and overlapping heat pipes bridging the Intel i7-13650HX CPU and the NVIDIA GPU.
 
-
-──────────────────────┐
-                    
+```text
+────────────────────────────────────┐               
                      ┌──────────────┼──────────────┐
                      │                             │
                      │     Dual Super Falcon Fans  │
@@ -108,7 +107,7 @@ The Lenovo LOQ 15IRX9 (Type 83DV)—uses Lenovo’s updated hyperchamber cooling
               [CPU Burst Power spikes]     [Sustained GPU TGP]
                         (TTFT Phase)         (Sustained TPS)
 
-
+```
 
 CPU and GPU operate as independent compute units.
 
@@ -253,9 +252,9 @@ performance metrics
 thermal conditions
 
 
+```text
 Inference Speed (TPS)
-  ▲
-  
+  ▲ 
   │          [Optimal Points]
   │                 ★ (Fastest / Low Context)
   │                /
@@ -268,12 +267,13 @@ Inference Speed (TPS)
   │         /        ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■
   │        /         ■  CRASH ZONE (OOM)       ■
   │       /          ■  (VRAM > 4.2 GB)        ■
-  │      /           ■                         ■
-  
+  │      /           ■                         ■  
   └─────┴────────────┴─────────────────────────┴─────►
   0    1.0          4.2 (Safety Ceiling)      6.0  VRAM Used (GB)
 
+```
 
+```text
 
 Inference Speed (TPS)
   ▲
@@ -291,8 +291,9 @@ Inference Speed (TPS)
   │       /          ■                         ■
   │      /           ■                         ■
   └─────┴────────────┴─────────────────────────┴─────►
-  0    50          80                        100.0  GPU Surface Temp (Celcius)
+  0    50           70                        100.0  GPU Surface Temp (Celcius)
 
+```
 
 ## ⚠️ Notes
 
