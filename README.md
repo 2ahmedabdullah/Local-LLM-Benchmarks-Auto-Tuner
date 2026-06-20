@@ -47,7 +47,7 @@ Skip time-series logging in the prefill phase because the mathematical time inte
 
 ![Time Series Data](system_performance_plot.png)
 
-
+```text
 1) The system is GPU-bound but stable after warm-up: VRAM line (~3 GB range) quickly ramps up and then stays flat
  
   → means the model/load is allocated once and reused efficiently
@@ -81,7 +81,7 @@ This tells us: cooling system is coping no thermal throttling spiral. If there w
 
 
 6) RAM is irrelevant in this pipeline: “Scaled RAM” line is basically flat → This confirms workload is GPU-contained, not CPU-swapping.
-
+```
 
 ## Timeline
  
