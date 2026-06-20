@@ -35,7 +35,7 @@ Estimated throttling behavior
 
 Below is the combined performance metrics log capturing throughput alongside system hardware telemetry:
 
-| Timestamp | Instantaneous TPS | TPS | ITL (ms) | VRAM (GB) | RAM Used (GB) | Temp (°C) | Clock Deficit |
+| Timestamp | Instantaneous TPS | TPS | ITL | VRAM (GB) | RAM Used (GB) | Temp (°C) | Clock Deficit (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-06-19 20:00:50 | 40.2 | 48.8 | 20.5 | 2.6 | 3.6 | 66.0 | 17.0 |
 | 2026-06-19 20:00:51 | 40.5 | 48.8 | 20.5 | 2.6 | 3.6 | 66.0 | 17.0 |
