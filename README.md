@@ -49,28 +49,33 @@ Skip time-series logging in the prefill phase because the mathematical time inte
 
 
 1) The system is GPU-bound but stable after warm-up: VRAM line (~3 GB range) quickly ramps up and then stays flat
-→ means the model/load is allocated once and reused efficiently
-→ no memory leaks or repeated reloading
+ 
+  → means the model/load is allocated once and reused efficiently
+ 
+  → no memory leaks or repeated reloading
 
-That’s good engineering hygiene.
 
 2) Throughput (TPS) has a classic “startup spike → steady state → decay” pattern. TPS jumps to ~70 early then settles around ~40–45 tokens/sec
 
-Interpretation:
+  Interpretation:
 
-Initial burst = model warm-up / cache priming / kernel optimization
-Drop afterward = real sustained inference throughput
+  Initial burst = model warm-up / cache priming / kernel optimization
 
-Key insight: It’s fast initially, then stabilizes at realistic sustained throughput.
+  Drop afterward = real sustained inference throughput
+
+  Key insight: It’s fast initially, then stabilizes at realistic sustained throughput.
+
 
 3) Inter-token latency (ITL) is flat after stabilization: ITL becomes almost constant (~20-ish region in the plot)
 
-This implies: stable decoding loop, no jitter from memory swapping, no OS scheduling instability
+  This implies: stable decoding loop, no jitter from memory swapping, no OS scheduling instability
 
-hence -> predictable latency > peak speed in production systems.
+  hence -> predictable latency > peak speed in production systems.
+
 
 4) Temperature rises then plateaus (no runaway thermal curve) temp climbs early (load phase) then flattens instead of continuously rising
 This tells us: cooling system is coping no thermal throttling spiral. If there were throttling, one’d see: TPS collapsing while temp keeps rising
+
 
 5) Clock deficit + VRAM behavior suggests mild throttling, not catastrophic throttling clock deficit fluctuates but doesn’t explode GPU clock likely reduces slightly under sustained load.
 
